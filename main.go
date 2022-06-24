@@ -3,7 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	
+	// argumento 1 para que tipo de dato, 3 para longitud, 3 para la capacidad
+	slice := make([]int, 3, 3)
+	// modificar valores segun sus indices
+	slice[0] = 100
+	slice[1] = 200
+	slice[2] = 300
+	// agregar nuevos elementos a nuestro slice con append
+	slice = append(slice, 400)
+	fmt.Println(slice)
+	// len para longitud, cap para capacidad
+	fmt.Println(len(slice))
+	fmt.Println(cap(slice))
+
+
 }
 
 /*
@@ -135,5 +148,56 @@ Clase 12
 
 Clase 13 
 - lectura de valores de teclado
-	
+	fmt.Print("Ingresa tu edad: ")
+	// %s para leer un valor de tipo string, en &nombre se coloca con & para que sea como referencia
+	fmt.Scanf("%d", &edad)	
+
+Clase 14
+- arreglos
+	// 100 es la longitud del arreglo, int para tipo de dato, los valores se inician en cero
+	var numeros[100] int
+	numeros[0] = 100
+	numeros[1] = 200
+	numeros[2] = 300
+	numeros[3] = 400
+	numeros[4] = 500
+	fmt.Println(numeros)
+- otra forma
+	numero := [5] int { 1, 2, 3, 4, 5 }
+- omitiendo longitud
+	numero := [...] int { 1, 2, 3, 4, 5 }
+
+Clase 15
+- arreglos segunda parte
+	// 0 1 2 equivalen a los indices donde se guardan los datos
+	monedas := [...] string { 0: "hola", 1: "angel", 2: "serrato"}
+	// sub arreglo no son mas que Slice
+	subMoneda := monedas[0:3]
+
+Clase 16
+- slice, un slice no puede existir sin un arreglo
+	numeros := [] int {1, 2, 3, 4}
+- los slice son dinamicos pueden crecer o decrecer y son una referencia a un arreglo 
+
+Clase 17
+- slice debe tener un puntero una longitud y una capacidad
+	meses := []string { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre" }
+	longitud := len(meses)
+	capacidad := cap(meses)
+- son el acceso a una subsecuencia de elementos de un arreglo
+
+Clase 19 
+- crear slice con make
+	// argumento 1 para que tipo de dato, 3 para longitud, 3 para la capacidad
+	slice := make([]int, 3, 3)
+	// modificar valores segun sus indices
+	slice[0] = 100
+	slice[1] = 200
+	slice[2] = 300
+	// agregar nuevos elementos a nuestro slice con append
+	slice = append(slice, 400)
+	fmt.Println(slice)
+	// len para longitud, cap para capacidad
+	fmt.Println(len(slice))
+	fmt.Println(cap(slice))
 */
