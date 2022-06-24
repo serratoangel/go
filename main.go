@@ -333,4 +333,38 @@ func main() {
 	}
 	fmt.Println("La cantidad de digitos es ", contador)
 }
+
+Clase 28 
+- Ciclo for each para iterar los elementos de un arreglo
+func main() {
+	animales := [...]string {"perro","gato","vaca","cerdo"}
+	// mediante su indice
+	for indice := 0; indice < len(animales; indice ++) {
+		elemento := animales[indice]
+		fmt.Println(elemento)
+	}
+	// con for each
+	for indice, elemento := range animales {
+		fmt.Println("El indice ", indice, "valor", elemento)
+	}
+}
+
+Clase 29 
+- break and continue
+func main() {
+	for i := 1; i <= 10; i++ {
+		if i == 5 {
+			// finaliza la iteracion y pasa a la siguiente
+			continue
+		}
+		if i == 8 {
+			// break finaliza la ejecucion del ciclo actual
+			break
+		}
+		fmt.Println(i)
+	}
+}
+
+Clase 30
+- 
 */
