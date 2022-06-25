@@ -2,9 +2,20 @@ package main
 
 import "fmt"
 
+
+
 func main() {
-	
+	// se debe hacer al llamado a la funcion
+	func () {
+		fmt.Println("Hola")
+	} ()
+	// o se debe guardar la funcion en una variable
+	variable := func () {
+		fmt.Println("Hola")
+	}
+	variable()
 }
+
 
 /*
 Junio 23 2022
@@ -366,5 +377,82 @@ func main() {
 }
 
 Clase 30
+- funcion panic para finalizar de forma abrupta
+func main() {
+	var dividendo, divisor int
+	fmt.Println("Ingresa un valor para el dividendo")
+	fmt.Scanf("%d", &dividendo)
+
+	fmt.Println("Ingresa un valor para el divisor")
+	fmt.Scanf("%d", &divisor)
+
+	if divisor == 0 {
+		panic("no se puede dividir sobre cero")
+	}
+
+	resultado := dividendo / divisor
+	fmt.Println(resultado)
+}
+
+Clase 31 
+- ciclo for como ciclo do while
+func main() {
+	var numero = 1
+	for variable := true; variable; variable = numero < 10 {
+		fmt.Println(numero)
+		numero ++
+	}
+}
+
+Clase 32
+- ciclo infinito for se puede finalizar con break o panic
+func main() {
+	var numero = 1
+	for {
+		fmt.Println(numero)
+		numero ++
+		if numero == 100 {
+			break
+		}
+	}
+}
+
+Clase 33
+- funciones
+func saludar(nombre string) {
+	fmt.Println("Hola ", nombre)
+}
+
+func main() {
+	saludar("Angel")
+}
+
+Clase 34
+- retornar valores
+// con el int al final le indica el tipo de valor que va a retornar
+func suma(numero1, numero2 int) int {
+	return numero1 + numero2
+}
+
+func main() {
+	resultado := suma( 1,2 )
+	fmt.Println(resultado)
+}
+
+Clase 35
+- funcion anonima
+func main() {
+	// se debe hacer al llamado a la funcion
+	func () {
+		fmt.Println("Hola")
+	} ()
+	// o se debe guardar la funcion en una variable
+	variable := func () {
+		fmt.Println("Hola")
+	}
+	variable()
+}
+
+Clase 36
 - 
 */
